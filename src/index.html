@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PathFinding3D</title>
+    <link rel="icon" href="./assests/logo.png" type="image/icon type" />
+    <style>
+      #canv {
+        background-color: blue;
+      }
+    </style>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body class="body">
+    <!-- modal is used to show the user guide -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div id="modal" class="modal">
+      <button class="button close-button" id="close-button">&times;</button>
+      <div class="modal-guts">
+        <img class="tab" src="../screenshots/welcome.png" alt="" />
+        <img class="tab" src="../screenshots/guide1.png" alt="" />
+      </div>
+
+      <div class="prevNextBtn">
+        <button type="button" id="prevBtn" class="button prevBtn">
+          Previous
+        </button>
+        <button type="button" id="nextBtn" class="button nextBtn">Next</button>
+      </div>
+
+      <div class="stepDiv">
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </div> 
+
+    <div class="contain">
+       <button id="open-button" class="button open-button">Guide</button>
+      <canvas id="canv"></canvas>
+      <div id="controls">
+        <div class="button_con">
+          <select id="algorithms" class="button algorithm">
+            <option value="dijkstra">Dijkstra</option>
+            <option value="aStar">Astar</option>
+            <option value="bfs">Bfs</option>
+          </select>
+          <button class="button setStartNode">SetStartNode</button>
+        </div>
+        <div class="button_con">
+          <button class="button setStopNode">SetStopNode</button>
+          <button class="button setBlockers">SetBlockers</button>
+        </div>
+        <div class="button_con">
+          <button class="button startButton">Start</button>
+          <button class="button startNew">StartNew</button>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
